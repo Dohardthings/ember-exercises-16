@@ -1,0 +1,19 @@
+<p>
+  Yaaas bloggsssss!
+</p>
+<ul>
+  {{#each model as |blog|}}
+<li>
+  <p>
+    {{blog.title}}
+  </p>
+  <p>{{blog.content}}</p>
+</li>
+  {{/each}}
+</ul>
+
+
+
+
+
+{{outlet}}
