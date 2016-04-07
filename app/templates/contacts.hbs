@@ -1,0 +1,25 @@
+{{outlet}}
+
+
+<h2>People to fart on bwahahaha!</h2>
+<ul>
+  {{log model}}
+  {{#each model as |contact|}}
+  <li>
+    {{contact.firstName}}
+    {{contact.lastName}}
+  </li>
+  {{/each}}
+</ul>
+<button action toggle newContact on="click">show new contact form</button>
+
+<form {{action newContact on="submit"}}>
+
+  {{input placeholder="First Name" value=firstName}}
+  {{input placeholder="Last Name" value=lastName}}
+  {{input placeholder="Address" value=address}}
+  {{input placeholder="Phone Number" value=phoneNumber}}
+  <button>submit</button>
+
+
+</form>
