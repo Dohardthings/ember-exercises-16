@@ -1,0 +1,16 @@
+{{outlet}}
+
+<h2>bookmarkey formy</h2>
+<form {{action saveBookmark on="submit"}}>
+  {{input placeholder= "bookmark title" type="text" value=title}}
+  {{input placeholder= "bookmark address" type="text" value=address}}
+  <button>submit</button>
+</form>
+
+
+<h2>Bookmarks</h2>
+ <ul>
+   {{#each model as |bookmark|}}
+    <li><a href="{{bookmark.address}}" target="_blank">{{bookmark.title}}</a></li>
+   {{/each}}
+ </ul>
