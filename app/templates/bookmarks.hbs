@@ -11,6 +11,6 @@
 <h2>Bookmarks</h2>
  <ul>
    {{#each model as |bookmark|}}
-    <li>{{bookmark.title}}</li>
+    <li><a href="{{bookmark.address}}" target="_blank">{{bookmark.title}}</a></li>
    {{/each}}
  </ul>
